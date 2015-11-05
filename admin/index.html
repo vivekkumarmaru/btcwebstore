@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- CSS -->
+	<!-- load bootstrap (bootswatch version) -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/angular-flash.min.css">
+	
+	<!-- JS -->
+	<!-- load angular, ngRoute, ngAnimate -->
+	<script src="./js/lib/angular.min.js"></script>
+	<script src="./js/lib/angular-route.js"></script>
+	<script src="./js/lib/angular-animate.js"></script>
+	<script src="./js/lib/angular-flash.min.js"></script>
+
+</head>
+
+<!-- apply our angular app -->
+<body>
+    <!-- inject our views using ng-view -->
+	<!-- each angular controller applies a different class here -->
+	
+
+	<div ng-app="demoApp" class="cont">
+	    <div class="demo" ng-controller="flashController">
+	        <h3>Click on any button</h3>
+	        <a class="link" target="_blank" href="https://github.com/sachinchoolur/angular-flash">View on Github</a>
+	        <button class="btn btn-success" ng-click="success()">Success</button>
+	        <button class="btn btn-info" ng-click="info()">Info</button>
+	        <button class="btn btn-warning" ng-click="warning()">Warning</button>
+	        <button class="btn btn-danger" ng-click="danger()">Danger</button>
+	        <button class="btn btn-primary" ng-disabled="hasFlash == false;" ng-click="pause()">Pause</button>
+	        <div flash-message="10000"></div>
+	    </div>
+	</div>
+	<script src="./js/flashController.js"></script>
+</body>
+</html>
+
+
